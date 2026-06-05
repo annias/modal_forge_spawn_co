@@ -1732,6 +1732,124 @@ footer {
   right: 1.25rem;
 }
 
+/* --- 4.7 Control Deck Presets Directory --- */
+.presets-section {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.presets-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .presets-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.presets-table-wrapper {
+  background: rgba(13, 15, 20, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  overflow-x: auto;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+}
+
+.presets-table-wrapper:hover {
+  border-color: rgba(157, 78, 221, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(157, 78, 221, 0.05);
+}
+
+.presets-table-title {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--accent-purple);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(157, 78, 221, 0.2);
+}
+
+.presets-table-title span {
+  color: var(--accent-green);
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+}
+
+.presets-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.presets-table th, .presets-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: middle;
+}
+
+.presets-table th {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(7, 8, 11, 0.3);
+}
+
+.presets-table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.presets-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.presets-table td.num-cell {
+  font-family: var(--font-mono);
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.presets-table td.preset-name-cell {
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.presets-table td.dials-cell {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.presets-table tr:hover td.dials-cell {
+  color: var(--accent-green);
+  text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+}
+
+.presets-table td.desc-cell {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
 /* --- Responsive Layout Adjustments --- */
 @media (max-width: 1024px) {
   .hero-content h1 {
