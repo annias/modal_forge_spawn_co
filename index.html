@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Forge — Generative UI Design Engine by Spawn.co</title>
+  <meta name="description" content="One prompt, four takes. Describe your modal UI concept, lock constraints in the Control Deck, and use the Forge Director to refine your generated designs.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. NAVIGATION HEADER
+       ========================================== -->
+  <header id="main-header">
+    <div class="container">
+      <div class="logo-wrapper">
+        <div class="logo-icon"></div>
+        <div class="logo-text">MODAL<span>FORGE</span></div>
+      </div>
+      <nav class="main-nav">
+        <a href="#hero" class="active">Home</a>
+        <a href="#loop">Design Loop</a>
+        <a href="#control-deck">Control Deck</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#sandbox">Sandbox</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://github.com" target="_blank" class="btn btn-secondary" id="git-repo-btn">
+          <svg style="width:16px; height:16px; fill:currentColor; vertical-align:middle; margin-top:-2px;" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Repository
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobile-nav-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+  <section id="hero" class="hero-sec">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="section-tag">Spawn.co System Module</span>
+          <h1>Generate & <span class="purple-green-gradient">Refine Modals</span> in Real-time</h1>
+          <p>Describe your target interface, lock design variables in the Control Deck, and use the Forge Director to breed, mutate, and export production-ready HTML/CSS.</p>
+          <div class="hero-cta">
+            <a href="#control-deck" class="btn btn-primary">Try Deck Simulator</a>
+            <a href="#sandbox" class="btn btn-secondary">Run Sandbox Forge</a>
+          </div>
+        </div>
+        <div class="hero-mockup">
+          <div class="floating-element float-1">
+            <span class="badge badge-green">★ Forge Director</span>
+          </div>
+          <div class="floating-element float-2">
+            <span class="badge badge-purple">⚙️ 32 ctl-modules</span>
+          </div>
+          <div class="mockup-wrapper">
+            <img src="assets/screenshots/screenshot-01.png" alt="Modal Forge Workspace Mockup" class="mockup-screen">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. DESIGN LOOP SECTION
+       ========================================== -->
+  <section id="loop" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">The Generation Cycle</h2>
+      <p class="section-desc">Forge, inspect, and refine. Build complex UI dialogue frames in a structured design pipeline.</p>
+      
+      <div class="loop-grid">
+        <div class="loop-step glass-card">
+          <div class="step-num">01</div>
+          <h3>Describe It</h3>
+          <p>Type a plain-language prompt (or select starting ideas). Tap the Variance pills to direct how wild or safe the four visual takes run.</p>
+        </div>
+        <div class="loop-step glass-card">
+          <div class="step-num">02</div>
+          <h3>Steer constraints</h3>
+          <p>Lock layout, density, color palette, components, and motion intelligence parameters in the Control Deck to force generator compliance.</p>
+        </div>
+        <div class="loop-step glass-card">
+          <div class="step-num">03</div>
+          <h3>Refine & Save</h3>
+          <p>Use the Forge Director to hybridize two takes, spin off individual mutations, save templates to your library, and copy clean code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. INTERACTIVE CONTROL DECK SIMULATOR
+       ========================================== -->
+  <section id="control-deck" class="control-deck-sec">
+    <div class="container">
+      <span class="section-tag">Total Creative Steering</span>
+      <h2 class="section-title">Interactive Control Deck</h2>
+      <p class="section-desc">Experience how the Control Deck snaps. Click a multi-module preset to automatically configure dials and preview the resulting generated modal style.</p>
+
+      <div class="deck-layout">
+        <!-- Sidebar Preset Selector -->
+        <div class="preset-sidebar">
+          <h3 style="font-size: 1.1rem; font-family: var(--font-mono); margin-bottom: 0.5rem; text-transform: uppercase;">Presets</h3>
+          <div class="preset-list">
+            <button class="preset-btn active" data-preset="pause-menu">
+              <span class="preset-btn-icon">⏸️</span>
+              <div class="preset-info">
+                <h4>Pause Menu <span class="preset-dials-count">27 dials</span></h4>
+                <p>Calm centered overlay with violet highlights and dim backdrop.</p>
+              </div>
+            </button>
+
+            <button class="preset-btn" data-preset="inventory-grid">
+              <span class="preset-btn-icon">🎒</span>
+              <div class="preset-info">
+                <h4>Inventory Grid <span class="preset-dials-count">31 dials</span></h4>
+                <p>Two-column RPG panel, slots grid, and green scanlines overlay.</p>
+              </div>
+            </button>
+
+            <button class="preset-btn" data-preset="quest-log">
+              <span class="preset-btn-icon">📜</span>
+              <div class="preset-info">
+                <h4>Quest Log <span class="preset-dials-count">31 dials</span></h4>
+                <p>Cyan-accented active tracking quest list log sheet.</p>
+              </div>
+            </button>
+
+            <button class="preset-btn" data-preset="form-heavy">
+              <span class="preset-btn-icon">📝</span>
+              <div class="preset-info">
+                <h4>Form Heavy <span class="preset-dials-count">32 dials</span></h4>
+                <p>Dense grouped forms structure, text fields, and labels.</p>
+              </div>
+            </button>
+
+            <button class="preset-btn" data-preset="soft-daylight">
+              <span class="preset-btn-icon">☀️</span>
+              <div class="preset-info">
+                <h4>Soft Daylight <span class="preset-dials-count">27 dials</span></h4>
+                <p>Bright light-mode backing with spacious, airy padding layout.</p>
+              </div>
+            </button>
+
+            <button class="preset-btn" data-preset="coin-op">
+              <span class="preset-btn-icon">🕹️</span>
+              <div class="preset-info">
+                <h4>Coin-Op Marquee <span class="preset-dials-count">31 dials</span></h4>
+                <p>Arcade retro aesthetics, orange neon glow, and CRT flickering.</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulator Details and Preview -->
+        <div class="simulator-panel glass-card">
+          <div class="sim-header">
+            <div class="sim-title">Active Configuration: <span>Control Deck</span></div>
+            <div class="locked-counter" id="locked-dials-val">27 DIALS</div>
+          </div>
+
+          <!-- Dial Grid (Populated by JS) -->
+          <div class="dials-grid" id="dials-grid-container">
+            <!-- Dials cards injected here -->
+          </div>
+
+          <!-- Visualizer Preview Area -->
+          <div class="visualizer-preview">
+            <span class="viz-label">// Live Output Preview Simulator</span>
+            <div class="viz-canvas-wrapper" id="viz-canvas-wrapper">
+              
+              <!-- Preview 1: Pause Menu -->
+              <div class="simulated-modal modal-pause-menu active">
+                <h3>System Paused</h3>
+                <div class="menu-options">
+                  <div class="menu-item">Resume Game</div>
+                  <div class="menu-item">Case Notes</div>
+                  <div class="menu-item">Settings</div>
+                  <div class="menu-item">Abort Mission</div>
+                </div>
+              </div>
+
+              <!-- Preview 2: Inventory Grid -->
+              <div class="simulated-modal modal-inventory">
+                <div class="inv-header">
+                  <h3>Inventory</h3>
+                  <span class="badge badge-green" style="font-size:0.65rem;">Class: Rogue</span>
+                </div>
+                <div class="burden-bar">
+                  <div class="burden-fill"></div>
+                </div>
+                <div class="grid-layout">
+                  <div class="char-slot" title="Equipped Weapon Slot">🗡️</div>
+                  <div class="items-slots">
+                    <div class="inv-slot" title="Spellbook">📖</div>
+                    <div class="inv-slot" title="Health Potion">🧪</div>
+                    <div class="inv-slot" title="Mana Herb">🌿</div>
+                    <div class="inv-slot" title="Gemstone">💎</div>
+                    <div class="inv-slot"></div>
+                    <div class="inv-slot"></div>
+                    <div class="inv-slot"></div>
+                    <div class="inv-slot"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Preview 3: Quest Log -->
+              <div class="simulated-modal modal-quest-log">
+                <h3>Active Journal</h3>
+                <div class="quest-meta">
+                  <span>CHAPTER 2</span> • <span style="color:var(--accent-cyan);">3 ACTIVE TASKS</span>
+                </div>
+                <div class="quest-list">
+                  <div class="quest-item">
+                    <h4>Ward of Shadows <span style="color:var(--accent-cyan);">[Tracked]</span></h4>
+                    <p>Locate the ancient runic charm inside the Arcane Codex archives.</p>
+                  </div>
+                  <div class="quest-item" style="border-color: rgba(255,255,255,0.1); background: transparent;">
+                    <h4 style="color:var(--text-muted);">Retrieve Forge Blacksmith Core</h4>
+                    <p>Deliver the elemental slag ingot back to Spawn.co for forge refueling.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Preview 4: Form Heavy -->
+              <div class="simulated-modal modal-form-heavy">
+                <h3>Account Registry</h3>
+                <p>Please populate the connection profiles to bind the Forge bridge.</p>
+                <div class="form-group">
+                  <label>Wisp Identifier</label>
+                  <input type="text" value="wisp-dispatcher-9821" readonly>
+                </div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label>Grid Columns</label>
+                    <input type="text" value="Two-column split" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label>Sizing Scale</label>
+                    <input type="text" value="520px (Locked)" readonly>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size:0.8rem;">Cancel</button>
+                  <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size:0.8rem;">Forge Bind</button>
+                </div>
+              </div>
+
+              <!-- Preview 5: Soft Daylight -->
+              <div class="simulated-modal modal-light-mode">
+                <h3>Welcome aboard</h3>
+                <p>Enjoy a spacious, airy design layout that breathes. Ideal for onboarding workflows and product guides.</p>
+                <button class="light-btn">Proceed forward</button>
+              </div>
+
+              <!-- Preview 6: Coin Op Marquee -->
+              <div class="simulated-modal modal-coin-op">
+                <h3>INSERT COIN</h3>
+                <p style="color:var(--accent-orange); font-family:var(--font-mono); margin-bottom:1.5rem; font-size:0.9rem;">1 CREDIT REQUIRED</p>
+                <button class="coin-op-btn">PRESS START</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. FEATURES TOUR SECTION
+       ========================================== -->
+  <section id="features" class="features-sec">
+    <div class="container">
+      <span class="section-tag">System Breakdown</span>
+      <h2 class="section-title">Packed with Generative Power</h2>
+      <p class="section-desc">Deep structural constraint pipelines and state-of-the-art visual post-refinement tools.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-icon-box">🎯</div>
+          <h3>Forge Director Refinement</h3>
+          <p>The original generation system has been augmented with the powerful Forge Director flow to facilitate advanced visual tweaks:</p>
+          <ul class="feature-list">
+            <li><strong>Hybridize takes:</strong> Breed traits from two selected modals to generate a blended child card.</li>
+            <li><strong>Mutate styles:</strong> Take a single favorite layout and spin off 4 sub-variations.</li>
+            <li><strong>palette swatching:</strong> Input visual palettes directly or let the auto-palette balance colors.</li>
+          </ul>
+        </div>
+
+        <div class="feature-card glass-card purple">
+          <div class="feature-icon-box">🧠</div>
+          <h3>Motion Intelligence (Feel Layer)</h3>
+          <p>Configure how interfaces *feel* during loading and user interaction, not just how they look statically:</p>
+          <ul class="feature-list">
+            <li><strong>Emotional Tones:</strong> Sync pacing with Calm, Playful, Aggressive, or Mysterious themes.</li>
+            <li><strong>Signature Moves:</strong> Toggle custom shaders: CRT screen flickers, holographic drift, or trails.</li>
+            <li><strong>Layer coherence:</strong> Ensures hover animations coordinate with entrance duration curves.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. SHOWCASE GALLERY GRID
+       ========================================== -->
+  <section id="gallery" class="gallery-sec">
+    <div class="container">
+      <span class="section-tag">Visual Walkthrough</span>
+      <h2 class="section-title">Application Gallery</h2>
+      <p class="section-desc">Browse actual screenshots from the Modal Forge workspace, detailing flows, settings, and final modal inspections.</p>
+      
+      <!-- Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Screens</button>
+        <button class="filter-btn" data-filter="workspace">Workspace & Flow</button>
+        <button class="filter-btn" data-filter="deck">Control Deck Dials</button>
+        <button class="filter-btn" data-filter="modals">Generated Modals</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        
+        <!-- Row 1 -->
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-01.png" alt="Main Workspace" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Workspace Home</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-02.png" alt="Prompting" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Prompting Inputs</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-03.png" alt="Variance" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Variance Options</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-04.png" alt="Palette engine" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Color Palette swatches</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-05.png" alt="Onboarding tips" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Onboarding Empty State</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-06.png" alt="Brief" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Creative Brief Builder</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-07.png" alt="Queue" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Forging Dispatch Status</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="modals">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-08.png" alt="Modal close up" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Rogue Reliquary Card</span>
+              <span class="gallery-category">Generated Modals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-09.png" alt="Planner view" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Creative Brief Planner</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-10.png" alt="Inspector panel" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Layout Inspection Overlay</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="gallery-item" data-category="modals">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-11.png" alt="Arcane Codex Inspect" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Arcane Codex Inspect View</span>
+              <span class="gallery-category">Generated Modals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="modals">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-12.png" alt="Slots detail" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Equipped Slots Inspection</span>
+              <span class="gallery-category">Generated Modals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-13.png" alt="Landing takes" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Generated Card Slots</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-14.png" alt="Multiple cards comparison" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Side-by-Side Comparisons</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-15.png" alt="Director buttons" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Forge Director Refinements</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-16.png" alt="Save dialog" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Save Modal Dialog</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-17.png" alt="Library view" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Personal Saved Library</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 (Dials) -->
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-18.png" alt="Sizing Dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Sizing Structure Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-19.png" alt="Typography Dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Theme Typography Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-20.png" alt="Motion dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Entrance Motion Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-21.png" alt="Presets view list" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Presets List Selection</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-22.png" alt="Motion intelligence dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Motion Intelligence Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-23.png" alt="Components dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Component Palette Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="deck">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-24.png" alt="Behavior dials" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Behavior Flag Dials</span>
+              <span class="gallery-category">Control Deck Dials</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="workspace">
+          <div class="gallery-img-wrapper">
+            <img src="assets/screenshots/screenshot-25.png" alt="Showcase Preview" class="gallery-img">
+            <div class="gallery-overlay">
+              <span class="gallery-title">Takes Showcase Dashboard</span>
+              <span class="gallery-category">Workspace & Flow</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. SANDBOX SIMULATOR SECTION
+       ========================================== -->
+  <section id="sandbox" class="sandbox-sec">
+    <div class="container">
+      <span class="section-tag">Interactive Preview</span>
+      <h2 class="section-title">Mini-Forge Sandbox</h2>
+      <p class="section-desc">Type an interface design prompt below to simulate how Modal Forge structures a brief, loads parameters, and outputs distinct design takes.</p>
+
+      <div class="sandbox-card glass-card">
+        <div class="sandbox-form">
+          <input type="text" id="sandbox-prompt-input" class="sandbox-input" placeholder="A dark fantasy inventory grid with ironbound slots...">
+          <button id="sandbox-forge-btn" class="btn btn-primary">Forge Modals</button>
+        </div>
+
+        <!-- Terminal Console -->
+        <div class="sandbox-console" id="sandbox-console-output">
+          <div class="console-line system">> Wisp engine ready. Input prompt and hit "Forge Modals" to trigger pipeline...</div>
+        </div>
+
+        <!-- Simulated takes results -->
+        <div class="sandbox-results" id="sandbox-results-container">
+          <!-- Dynamically populated by JS after generation simulation -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. LIGHTBOX VIEWER OVERLAY
+       ========================================== -->
+  <div class="lightbox" id="lightbox-viewer">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-image-box">
+        <img src="" alt="Zoomed View" class="lightbox-img">
+      </div>
+      <div class="lightbox-details">
+        <h3 class="lightbox-title">Screenshot Title</h3>
+        <p class="lightbox-desc">Detailed explanation of the screenshot details.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       9. FOOTER SECTION
+       ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrapper" style="margin-bottom: 0.75rem;">
+            <div class="logo-icon"></div>
+            <div class="logo-text">MODAL<span>FORGE</span></div>
+          </div>
+          <p>A procedural generative UI design tool bridging the gap between natural language prompts and structural web components.</p>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" class="btn-icon" title="View GitHub Repo">
+              <svg style="width:20px; height:20px; fill:currentColor;" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#loop">Design Loop</a></li>
+            <li><a href="#control-deck">Control Deck</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#sandbox">Sandbox Simulator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Spawn.co System</h4>
+          <ul>
+            <li><a href="https://spawn.co" target="_blank">Spawn.co Portal</a></li>
+            <li><a href="https://spawn.co/library" target="_blank">Nexus Public Catalog</a></li>
+            <li><a href="https://spawn.co/docs" target="_blank">Documentation</a></li>
+            <li><a href="https://spawn.co/community" target="_blank">Community</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Spawn.co / Modal Forge. All rights reserved.</p>
+        <p>Built for the Spawn.co generative UI ecosystem.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
