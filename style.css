@@ -340,6 +340,23 @@ header .container {
   gap: 1rem;
 }
 
+.spawn-nav-link {
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-fast);
+}
+.spawn-nav-link:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  filter: brightness(1.2);
+}
+
 /* Mobile Menu Toggle */
 .mobile-toggle {
   display: none;
@@ -359,6 +376,28 @@ header .container {
   background-image: radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.08) 0%, transparent 40%),
                     radial-gradient(circle at 15% 70%, rgba(0, 255, 102, 0.06) 0%, transparent 40%);
 }
+
+.hero-logo-box {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+.spawn-logo-link {
+  display: block;
+  width: 64px;
+  height: 64px;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+.spawn-logo-link:hover {
+  transform: translateY(-2px) scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.5));
+}
+.spawn-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 
 .hero-grid {
   display: grid;
@@ -1557,6 +1596,9 @@ footer {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  .hero-logo-box {
+    justify-content: center;
   }
   .hero-content {
     text-align: center;
