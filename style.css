@@ -1746,11 +1746,6 @@ footer {
   margin-top: 2.5rem;
 }
 
-@media (min-width: 1024px) {
-  .presets-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .presets-table-wrapper {
   background: rgba(13, 15, 20, 0.4);
