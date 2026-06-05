@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modal Forge — Generative UI Design Engine by Spawn.co</title>
   <meta name="description" content="One prompt, four takes. Describe your modal UI concept, lock constraints in the Control Deck, and use the Forge Director to refine your generated designs.">
-  <link rel="stylesheet" href="style.css?v=1.4">
+  <link rel="stylesheet" href="style.css?v=1.5">
 </head>
 <body>
 
@@ -276,6 +276,204 @@
 
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4.5 CONTROL DECK MODULE DIRECTORY
+       ========================================== -->
+  <section id="module-directory" style="background-color: var(--bg-primary); border-top: 1px solid var(--border-color); padding: 5rem 0;">
+    <div class="container">
+      <span class="section-tag">// Technical reference</span>
+      <h2 class="section-title">Control Deck Modules</h2>
+      <p class="section-desc">A complete reference guide of all 32 ctl-modules that govern the Modal Forge generation cycles.</p>
+
+      <div class="directory-tabs" style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 3rem; flex-wrap: wrap;">
+        <button class="dir-tab-btn active" data-category="all">All Modules</button>
+        <button class="dir-tab-btn" data-category="infra">Infrastructure</button>
+        <button class="dir-tab-btn" data-category="layout">Layout</button>
+        <button class="dir-tab-btn" data-category="theme">Theme</button>
+        <button class="dir-tab-btn" data-category="motion">Motion</button>
+        <button class="dir-tab-btn" data-category="mi">Motion Intelligence</button>
+        <button class="dir-tab-btn" data-category="comp">Components</button>
+        <button class="dir-tab-btn" data-category="behavior">Behavior</button>
+      </div>
+
+      <div class="directory-grid">
+        <!-- Infrastructure -->
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-deck-shell</h3>
+          <p>Client-side assembler that lays out the whole Control Deck panel UI.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-mi-shell</h3>
+          <p>Sub-panel assembler for the Motion Intelligence dial cluster.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-forge-bridge</h3>
+          <p>Bridges deck state parameters into the forge request.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-brief-compose</h3>
+          <p>Server-side aggregator: turns locked dials into the constraint block the generator reads.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-mi-compose</h3>
+          <p>Coherence engine that keeps the Motion Intelligence dials harmonized with each other.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-presets</h3>
+          <p>The 34-preset library: apply a preset to snap every dial, save your own custom presets.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="infra">
+          <span class="dir-card-tag badge badge-dark">Infra</span>
+          <h3>ctl-summary-chip</h3>
+          <p>Display-only readout pill showing how many dials are currently locked.</p>
+        </div>
+
+        <!-- Layout -->
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-layout</h3>
+          <p>Column structure (single / two-column key-value) and grouped vs. flat sections.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-sizing</h3>
+          <p>Locks modal width + optional snap grid.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-density</h3>
+          <p>Compact / comfortable / spacious spacing.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-header</h3>
+          <p>Header region: icon style, title, subtitle/breadcrumb/meta, close-button placement.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-footer</h3>
+          <p>Footer style (gradient / solid / ghost) and alignment.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="layout">
+          <span class="dir-card-tag badge badge-green">Layout</span>
+          <h3>ctl-identity</h3>
+          <p>Branding/identity treatment for the modal.</p>
+        </div>
+
+        <!-- Theme -->
+        <div class="dir-card glass-card" data-category="theme">
+          <span class="dir-card-tag badge badge-purple">Theme</span>
+          <h3>ctl-theme-accent</h3>
+          <p>Accent color (cyan / magenta / terminal-green / orange / violet).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="theme">
+          <span class="dir-card-tag badge badge-purple">Theme</span>
+          <h3>ctl-theme-mode</h3>
+          <p>Light/dark mode + corner shape (sharp / glow / rounded / pill).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="theme">
+          <span class="dir-card-tag badge badge-purple">Theme</span>
+          <h3>ctl-theme-surface</h3>
+          <p>Surface treatment (flat / gradient / neon / outline).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="theme">
+          <span class="dir-card-tag badge badge-purple">Theme</span>
+          <h3>ctl-theme-sections</h3>
+          <p>Section color-coding (mono vs. coded).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="theme">
+          <span class="dir-card-tag badge badge-purple">Theme</span>
+          <h3>ctl-theme-type</h3>
+          <p>Typography (mono / sans, label casing).</p>
+        </div>
+
+        <!-- Motion -->
+        <div class="dir-card glass-card" data-category="motion">
+          <span class="dir-card-tag badge badge-purple" style="color:var(--accent-cyan); border-color:rgba(0, 240, 255, 0.2); background:rgba(0, 240, 255, 0.05);">Motion</span>
+          <h3>ctl-motion-entrance</h3>
+          <p>Entrance easing (linear / ease-out / spring / snappy) + duration.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="motion">
+          <span class="dir-card-tag badge badge-purple" style="color:var(--accent-cyan); border-color:rgba(0, 240, 255, 0.2); background:rgba(0, 240, 255, 0.05);">Motion</span>
+          <h3>ctl-motion-hover</h3>
+          <p>Hover-feel (off / soft / snappy).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="motion">
+          <span class="dir-card-tag badge badge-purple" style="color:var(--accent-cyan); border-color:rgba(0, 240, 255, 0.2); background:rgba(0, 240, 255, 0.05);">Motion</span>
+          <h3>ctl-motion-backdrop</h3>
+          <p>Backdrop blur and dim intensity.</p>
+        </div>
+
+        <!-- Motion Intelligence -->
+        <div class="dir-card glass-card" data-category="mi">
+          <span class="dir-card-tag badge badge-purple">Motion Intel</span>
+          <h3>ctl-mi-tone</h3>
+          <p>Emotional tone (calm / playful / aggressive / elegant / mysterious).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="mi">
+          <span class="dir-card-tag badge badge-purple">Motion Intel</span>
+          <h3>ctl-mi-energy</h3>
+          <p>Energy level (subtle / gentle / lively / kinetic).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="mi">
+          <span class="dir-card-tag badge badge-purple">Motion Intel</span>
+          <h3>ctl-mi-layers</h3>
+          <p>Which motion layers run (entrance / hover / scroll / parallax / idle).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="mi">
+          <span class="dir-card-tag badge badge-purple">Motion Intel</span>
+          <h3>ctl-mi-platform</h3>
+          <p>Target platform style (web / mobile / kiosk / game-ui).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="mi">
+          <span class="dir-card-tag badge badge-purple">Motion Intel</span>
+          <h3>ctl-mi-signature</h3>
+          <p>Signature move (crt-flicker / holo-drift / neon-pulse / particle-trails / mouse-parallax).</p>
+        </div>
+
+        <!-- Components -->
+        <div class="dir-card glass-card" data-category="comp">
+          <span class="dir-card-tag badge badge-green">Component</span>
+          <h3>ctl-comp-choice</h3>
+          <p>Choice/option components styling formats.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="comp">
+          <span class="dir-card-tag badge badge-green">Component</span>
+          <h3>ctl-comp-inputs</h3>
+          <p>Text & number input fields properties.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="comp">
+          <span class="dir-card-tag badge badge-green">Component</span>
+          <h3>ctl-comp-rows</h3>
+          <p>Rows & stat readouts layouts.</p>
+        </div>
+        <div class="dir-card glass-card" data-category="comp">
+          <span class="dir-card-tag badge badge-green">Component</span>
+          <h3>ctl-comp-sliders</h3>
+          <p>Sliders (off / on / with-units / live readouts).</p>
+        </div>
+        <div class="dir-card glass-card" data-category="comp">
+          <span class="dir-card-tag badge badge-green">Component</span>
+          <h3>ctl-comp-toggles</h3>
+          <p>Toggles & status badges visuals.</p>
+        </div>
+
+        <!-- Behavior -->
+        <div class="dir-card glass-card" data-category="behavior">
+          <span class="dir-card-tag badge badge-dark" style="color:var(--accent-orange); border-color:rgba(247, 127, 0, 0.2); background:rgba(247, 127, 0, 0.05);">Behavior</span>
+          <h3>ctl-behavior-flags</h3>
+          <p>Four functional toggles: backdrop-click-to-close, lock background scroll, sticky footer, scrollable body.</p>
         </div>
       </div>
     </div>

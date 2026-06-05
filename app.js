@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initControlDeck();
   initGallery();
   initSandbox();
+  initModuleDirectory();
 });
 
 /* --- Navbar Scroll Effect --- */
@@ -481,6 +482,41 @@ function initSandbox() {
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
       }, idx * 150);
+    });
+  }
+}
+
+/* --- Control Deck Modules Directory Filtering --- */
+function initModuleDirectory() {
+  const dirButtons = document.querySelectorAll('.dir-tab-btn');
+  const dirCards = document.querySelectorAll('.dir-card');
+
+  if (dirButtons.length && dirCards.length) {
+    dirButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dirButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+        filterModules(category);
+      });
+    });
+  }
+
+  function filterModules(category) {
+    dirCards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'block';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 50);
+      } else {
+        card.style.display = 'none';
+      }
     });
   }
 }
