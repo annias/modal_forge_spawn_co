@@ -1796,4 +1796,8 @@ footer {
     max-width: 200px;
     margin: 0 auto;
   }
+  .sandbox-results {
+    grid-template-columns: 1fr;
+  }
 }
+

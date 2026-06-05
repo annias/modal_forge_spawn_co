@@ -454,6 +454,18 @@ function initSandbox() {
         badge: 'Take 2',
         class: 'badge-purple',
         desc: `A tactical monospace design matching: "${promptText}". Sharp edges, CRT scanline signature overlays, and a single column layout.`
+      },
+      {
+        title: 'Void Terminal',
+        badge: 'Take 3',
+        class: 'badge-green',
+        desc: `A minimal terminal-style interface matching: "${promptText}". Focuses on sizing scale constraint limits, light-dim backdrops, and high-contrast labels.`
+      },
+      {
+        title: 'Pixel Arcade',
+        badge: 'Take 4',
+        class: 'badge-purple',
+        desc: `A retro-arcade overlay matching: "${promptText}". Uses bright neon orange color washes, spring-type entrance easing, and particle-trail cursor signature animations.`
       }
     ];
 
